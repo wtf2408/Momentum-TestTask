@@ -105,7 +105,9 @@ function setBackgroundImage() {
 // Tasks Block
 const taskInput = document.getElementById('task_creater')
 const tasksList = document.getElementById('task_list')
-const tasks = JSON.parse(localStorage.getItem('tasks')) || []
+const tasks = JSON.parse(localStorage.getItem('tasks')) || [{ "text": "для добавления задачи ее нужно ввести и нажать Enter, для удаления нажать кнопку удаления справа.", "completed": false },
+    {"text":"взять автора данного приложения на работу","completed":false}
+]
 
 function renderTasks() {
     tasksList.innerHTML = ''
@@ -125,6 +127,7 @@ function renderTasks() {
 function addTask(task) {
     tasks.push({ text: task, completed: false })
     localStorage.setItem('tasks', JSON.stringify(tasks))
+    console.log(JSON.stringify(tasks))
     renderTasks()
 }
 

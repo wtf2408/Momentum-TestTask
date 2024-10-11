@@ -62,10 +62,11 @@ body {
 #task_creater {
     background: none;
     border-radius: 8px;
-    border: 1px solid white;
+    border: 2px solid white;
     padding: 6px;
     outline: none;
     color: white;
+    font-size: 1rem;
 }
 #task_creater.invalid {
     background-color: #fd00005b;
