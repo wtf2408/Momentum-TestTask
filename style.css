@@ -84,6 +84,7 @@ body {
     list-style: none;
     max-height: 150px;
     overflow-y: auto;
+    padding: 0 1rem;
 }
 #task_list li {
     display: flex;
@@ -108,6 +109,7 @@ body {
     margin-left: auto;
 }
 #task_list li button::after {
+    font-size: 1.1rem;
     color: white;
     content: "\f55a"; 
     font-family: "Font Awesome 6 Free";
