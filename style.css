@@ -1,0 +1,143 @@
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+.app_container {
+    max-width: 700px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+#city {
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    caret-color: white;
+    margin-bottom: 10px;
+}
+#city:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+#weather {
+    margin-bottom: 20px;
+}
+
+#weather_img {
+    width: 45px; height: 45px;
+    display: inline-block;
+}
+#time {
+    margin-top: 5rem;
+    font-size: 2rem;
+}
+#date {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/*задачи*/
+.tasks {
+    margin-top: 5rem;
+   
+}
+#task_creater {
+    background: none;
+    border-radius: 8px;
+    border: 1px solid white;
+    padding: 6px;
+    outline: none;
+    color: white;
+}
+#task_creater.invalid {
+    background-color: #fd00005b;
+}
+#task_creater:focus {
+    outline: none;
+    box-shadow: none;
+}
+#task_list {
+    font-size: 1.2rem;
+    min-width: 300px;
+    width: fit-content; 
+    margin: 2rem auto;
+    margin-top: 2rem;
+    list-style: none;
+    max-height: 150px;
+    overflow-y: auto;
+}
+#task_list li {
+    display: flex;
+    margin: 9px 0;
+    font-weight: 500;
+    text-shadow: 0 1px 4px rgb(86, 85, 85);
+}
+
+#task_list li input[type="checkbox"]
+{
+    transform: translateY(5px);
+    align-self: flex-start;
+    margin-right: 1rem;
+}
+#task_list li span
+{
+    text-align: left;
+}
+#task_list li button {
+    align-self: flex-start;
+    background: none; border: none; box-shadow: none; outline: none;
+    margin-left: auto;
+}
+#task_list li button::after {
+    color: white;
+    content: "\f55a"; 
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900; 
+    margin: 0 1rem;
+}
+
+
+
+/*скролл бар*/
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+@media screen and (max-width: 500px) {
+    #city {
+        font-size: 2rem;
+    }
+    #task_list {
+        min-width: 0;
+    }
+}
+@media screen and (max-width: 400px) {
+    #city {
+        font-size: 1.3rem;
+    }
+}
