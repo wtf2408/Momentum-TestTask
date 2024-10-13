@@ -85,6 +85,7 @@ function updateTime() {
 setInterval(updateTime, 1000)
 
 // Логика изменения фона
+let whiteTheme = true;
 const backgrounds = [
     'url(./imgs/night.jpg)',
     'url(./imgs/morning.jpg)',
@@ -99,8 +100,17 @@ function setBackgroundImage() {
     else if (currentHour >= 12 && currentHour < 18) index = 2
     else index = 3
     document.body.style.backgroundImage = backgrounds[index]
+    changeTheme(index)
 }
-
+function changeTheme(index) {
+    if (index == 2) whiteTheme = false;
+    else whiteTheme = true;
+    const color = whiteTheme ? "white" : "black"
+    cityInput.style.color = color
+    document.getElementById("weather").style.color = color
+    timeDisplay.style.color = color
+    dateDisplay.style.color = color
+}
 
 // Tasks Block
 const taskInput = document.getElementById('task_creater')

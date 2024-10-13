@@ -89,7 +89,6 @@ body {
 #task_list li {
     display: flex;
     margin: 9px 0;
-    text-shadow: 0 1px 4px rgb(86, 85, 85);
 }
 
 #task_list li input[type="checkbox"]
